@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title id="doc-title">DaDaDa~</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+    <!-- 样式文件 | CSS file -->
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <!-- 外部字体 | Outside font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <link href="img/favicon.ico" rel="shortcut icon">
+</head>
+
+
+
+
+<body>
+    <!--欢迎页面-->
+    <div id="welcome-page">
+        <h2></h2>
+        <br />
+        <img src="./img/welcome.gif">
+    </div>
+
+
+    <!--日志弹窗-->
+    <div id="changelog-modal" class="changelog-modal">
+        <div class="changelog-content">
+            <h2 id="logtitle">(由JS控制)</h2>
+            <p id="groupdescribe">============主站www.morax.top===========<br></p>
+            <p id="logtext">(由JS控制)</p>
+        </div>
+    </div>
+
+
+    <!--功能区-->
+    <div class="buttons-container">
+        <!-- 音乐播放按钮-->
+        <div id="volume-control" class="volume-control">
+          <i id="volume-icon" class="volume-icon"></i>
+        </div>
+        <!--更新日志按钮-->
+        <div id="changelog-button" class="changelog-button">
+            <i class="changelog-icon"></i>
+        </div>
+    </div>
+
+      
+    
+
+    <!--主体部分 | Main page-->
+    <main class="wrapper">
+        <div id="wrapper-background-filter"></div>
+        <div id="wrapper-background"></div>
+        
+        
+        <div id="content">
+            <div id="title-container">
+                <h1 id="page-title">Welcome to kirara dadada~ &nbsp;</h1>
+                <img id="title-img" alt="img of Klee" src="img/favicon.png">
+            </div>
+            <div id="container">
+                <select id="language-selector">
+                    <option id="lan1" value="cn" selected>Chinese</option>
+                    <option id="lan2" value="ja">Japanese</option>
+                    <option id="lan3" value="en">English</option>
+                </select>
+    
+                <select id="mode-selector">
+                    <option id="mode1">Default</option>
+                    <option id="mode2">Just Dadada</option>
+                    <option id="mode3">Easter egg</option>
+                </select>
+            </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <style>
+        *{  
+                   margin: 0px;  
+                   padding: 0px;  
+               }  
+               video{  
+                   position: fixed;  
+                   right: 0px;  
+                   bottom: 0px;  
+                   min-width: 100%;  
+                   min-height: 100%;  
+                   height: auto;  
+                   width: auto;  
+                   /*加滤镜*/
+                   /*filter: blur(15px); //背景模糊设置 */
+                   /*-webkit-filter: grayscale(100%);*/  
+                   /*filter:grayscale(100%); //背景灰度设置*/  
+                   z-index:-11
+               }  
+               source{  
+                   min-width: 100%;  
+                   min-height: 100%;  
+                   height: auto;  
+                   width: auto;  
+               } 
+               p{
+                   width: 100%;
+                   text-align: center;
+                   font-size: 40px;
+                   color: white;
+               }
+       </style>
+       <body>
+       <p>纳西妲~</p>
+       
+
+        
+       </body>
+       </html>
+
+
+            <hr id="subtitle-seperator" />
+            <h2 id="page-descriptions">
+                The website for Klee, the <del>annoying</del> cutest genius Genshin
+                Impact character out there.
+            </h2>
+            <div id="counter-container">
+                <h3 id="counter-descriptions">Klee has been Dadada~ed for</h3>
+                <br />
+                <br />
+                <p id="local-counter">0</p>
+                <br />
+                <br />
+                <p id="counter-unit">times</p>
+                <button id="counter-button">
+                    Squish the Klee~!
+                </button>
+            </div>
+            <hr />
+            <div id="grid">
+                <noscript>Your browser does not support JavaScript or JavaScript has been
+                    disabled.<br />This website relies on JavaScript, so please enable it
+                    or use another browser.</noscript>
+            </div>
+        </div>
+    </main>
+
+    <!-- 尾部部分 | Footer -->
+    
+    <div id="footer">
+        <img id="klee-card" loading="lazy" src="img/card.jpg" alt="" /> <!--由JS控制src的具体路径-->
+        <div id="footer-text">
+            
+            <p id="footer-repository-text">
+                You can check out the Gitee repository here:
+            </p>
+            <p>
+
+                <video controls="controls" width="700px" height="400px" autoplay muted loop>
+                    <source src="https://vodkgeyttp9.vod.126.net/cloudmusic/obj/wo7DlMODw6fDi2jDiMK-/28880273181/cb90/2023520221153/5ff026e1b1e7edae58920f0161d53f33.mp4?ts=1687274491&rid=590ED1208B73396E4300DA90B97EB637&rl=3&rs=KWhQUsCGOgUpwKGFBZkFbagAiqIkNfJV&sign=b13c66e606570ba9458aba12183dba42&ext=XWmXLpV6x9kyziIC1JhoB7PC2Pk00JmZAyjXBQbM0ZRwc9VI4pixSs%252BvIleHCFWinz0j7VWXprTQRwCkPzVHUbHEoa8UzIRSNt8h2JPDvhv05HqKwkh%252F2huDahPt9l0CppbdeZ%252Fet1ij3fW7DlP4D5Fxna7CldmpPjulkSkcvssPSvOhzEzTwZi0qVg8ebZ%252FZw%252BQCyUkhoIdAUGim%252FkzN1ibBLaWTMuGtT71Ii%252BBAjktiuYNMb5R4UcKjMzKUQEL7s7zr%252BzaVnaa0XhPweKu%252Br6fkU6LxduYhutvUkVbajpug%252FoRzo3E0%252FjFckGfsIpUJbTeKba%252B6KZNEDztcSWw4cNpIy4nDgeinclG73WEMR5vFwpUwx8bCXvemo2HNLdT4GpoRVG15nkjSF8fxFQxrXPRvZ3TSk6zcKv2vbOGnXRU6%252BWAd7GuEYZ9XQpnzt3ewlCH1vOtcDZWoTp7JdM88me9gZchnQ6EKivOEW6%252FC4wdZ7%252BWsG7inqmGZ6JfgwYbYCiOrb4wn%252BJ1WA4aT9EpUrwASlFMP8fxhrfw%252Bch2pNB%252FNxk0FLYQWXOAf4PDhDP%252B" type="video/mp4">
+                    
+                    您的浏览器不支持 video 标签
+                   </video>
+
+
+
+
+                <!--这里填写本网站的Github地址-->
+                <a href="https://github.com/moraxs/GenshinThemeWeb" target="_blank">
+                    <span class="footer-icon-text"
+                        id="footer-repository-text-2">Web_OF_Kleedadada (Gitee)</span></a>
+            </p>
+
+            
+            <br/>
+            <p id="footer-repository-text3">
+                This website is based on the repository source code changes
+            </p>
+            <p>
+                <!--source code-->
+                <a href="https://github.com/duiqt/herta_kuru" target="_blank"><iconify-icon icon="mdi:github" id="github-footer-icon"
+                        class="footer-icon"></iconify-icon><span class="footer-icon-text"
+                        id="footer-repository-text-4">SourceCode's repository</span></a>
+            </p>
+            <br/>
+
+            <p id="footer-repository-text3">
+                This website is based on the repository source code changes
+            </p>
+            <p>
+                <!--source code-->
+                <a href="https://gitee.com/KleeGitee/Klee" target="_blank"><iconify-icon icon="mdi:github" id="github-footer-icon"
+                        class="footer-icon"></iconify-icon><span class="footer-icon-text"
+                        id="footer-repository-text-5">SourceCode's repository</span></a>
+            <p id="footer-repository-text5">
+                感谢KleeGitee提供的基础源代码
+
+            <br/>
+            <p id="credits-gif">Klee gif made by</p>
+            <p>
+                <a href="https://twitter.com/Seseren_kr" target="_blank"><iconify-icon icon="mdi:twitter"
+                        id="twitter-footer-icon" class="footer-icon"></iconify-icon><span
+                        class="footer-icon-text">@Seseren_kr</span></a>
+            </p>
+
+
+        </div>
+    </div>
+    <script src="./script.js" async></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T303QPC9L9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-T303QPC9L9');
+    </script>
+</body>
+
+</html>
