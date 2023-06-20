@@ -85,15 +85,15 @@ const LANGUAGES = {
             "audio/CN_voice/03.mp3",
             "audio/CN_voice/04.mp3",
             "audio/CN_voice/05.mp3",
-            "audio/CN_voice/nana.mp3",
-            "audio/CN_voice/nana2.mp3",
+            "audio/CN_voice/06.mp3",
+            "audio/CN_voice/07.mp3",
             //11-16：彩蛋模式 mode3
             "audio/General/03.mp3",
             "audio/General/02.mp3",
             "audio/General/01.mp3",
             "audio/General/04.mp3",
             "audio/General/05.mp3",
-            "audio/General/nana2.mp3"
+            "audio/General/01.mp3"
         ],
         texts: {
             "page-title": "珊瑚宫心海~",
