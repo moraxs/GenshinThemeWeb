@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title id="doc-title">DaDaDa~</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+    <!-- 样式文件 | CSS file -->
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <!-- 外部字体 | Outside font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <link href="img/favicon.ico" rel="shortcut icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+    #fixed-bottom {
+    position: fixed;
+    top: 0;
+    display: flex; /* 使用flex布局 */
+    justify-content: center; /* 设置水平居中 */
+    }
+    .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0; /* 将左侧位置设置为0，而不是使用 margin: auto; */
+  right: 0; /* 将右侧位置设置为0，而不是使用 margin: auto; */
+  background-color: #686767; /* 可选：添加背景颜色以与其他元素区分 */
+  padding: 10px; /* 可选：添加内边距以增加间距 */
+}
+    </style>
+   </head>
+
+
+
+<body>
+    <body>
+        <div id="data-container">
+            <!-- 这里是显示数据的地方 -->
+            </div>
+        <p id="fixed-bottom">截止到<span id="time"></span>，该网站已经被访问了<span id="visits"></span>次</p>
+        <script>
+        // 创建一个XMLHttpRequest对象
+        var xhr = new XMLHttpRequest();
+        // 设置请求方法和URL
+        xhr.open("GET", "http://124.223.182.32:3003");
+        // 设置响应类型为文本
+        xhr.responseType = "text";
+        // 设置请求完成后的回调函数
+        xhr.onload = function() {
+        // 如果响应状态码为200，表示成功
+        if (xhr.status == 200) {
+        // 获取响应文本
+        var time = xhr.responseText;
+        // 修改id为time的元素的内容为响应文本
+        document.getElementById("time").innerHTML = time;
+        }
+        };
+        // 发送请求
+        xhr.send();
+        $.get("http://124.223.182.32:3002", function(data) {
+        document.getElementById("visits").innerHTML = data.visits;
+        });
+        </script>
+        <script>
+            // 这里是JavaScript代码
+            // 向后端发送请求，获取json数据
+            fetch("http://124.223.182.32:3004")
+            .then(response => response.json()) // 把json数据转换成JavaScript对象
+            .then(data => {
+            // 创建一个无序列表元素
+            let ul = document.createElement("ul");
+            ul.className = "footer"; // 给无序列表元素添加一个类名
+            // 遍历json数据中的每个属性
+            for (let key in data) {
+            // 创建一个列表项元素
+            let li = document.createElement("li");
+            // 设置列表项的内容为属性名和属性值
+            li.textContent = key + ": " + data[key];
+            // 把列表项添加到无序列表中
+            ul.appendChild(li);
+            }
+            // 获取显示数据的div元素
+            let container = document.getElementById("data-container");
+            // 把无序列表添加到div元素中
+            container.appendChild(ul);
+            })
+            </script>
+    <!--欢迎页面-->
+    <div id="welcome-page">
+        <h2></h2>
+        <br />
+        <img src="./img/welcome.gif">
+    </div>
+
+
+    <!--日志弹窗-->
+    <div id="changelog-modal" class="changelog-modal">
+        <div class="changelog-content">
+            <h2 id="logtitle">(由JS控制)</h2>
+            <p id="groupdescribe">============主站www.morax.top===========<br></p>
+            <p id="logtext">(由JS控制)</p>
+        </div>
+    </div>
+
+
+    <!--功能区-->
+    <div class="buttons-container">
+        <!-- 音乐播放按钮-->
+        <div id="volume-control" class="volume-control">
+          <i id="volume-icon" class="volume-icon"></i>
+        </div>
+        <!--更新日志按钮-->
+        <div id="changelog-button" class="changelog-button">
+            <i class="changelog-icon"></i>
+        </div>
+    </div>
+
+      
+    
+
+    <!--主体部分 | Main page-->
+    <main class="wrapper">
+        <div id="wrapper-background-filter"></div>
+        <div id="wrapper-background"></div>
+        
+        
+        <div id="content">
+            <div id="title-container">
+                <h1 id="page-title">Welcome to kirara dadada~ &nbsp;</h1>
+                <img id="title-img" alt="img of Klee" src="img/favicon.png">
+            </div>
+            <div id="container">
+                <select id="language-selector">
+                    <option id="lan1" value="cn" selected>Chinese</option>
+                    <option id="lan2" value="ja">Japanese</option>
+                    <option id="lan3" value="en">English</option>
+                </select>
+    
+                <select id="mode-selector">
+                    <option id="mode1">Default</option>
+                    <option id="mode2">Just Dadada</option>
+                    <option id="mode3">Easter egg</option>
+                </select>
+            </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       </style>
+       <body>
+       <p></p>
+       
+       
+        
+       </body>
+       </html>
+
+
+            <hr id="subtitle-seperator" />
+            <h2 id="page-descriptions">
+                The website for Klee, the <del>annoying</del> cutest genius Genshin
+                Impact character out there.
+            </h2>
+            <div id="counter-container">
+                <h3 id="counter-descriptions">Klee has been Dadada~ed for</h3>
+                <br />
+                <br />
+                <p id="local-counter">0</p>
+                <br />
+                <br />
+                <p id="counter-unit">times</p>
+                <button id="counter-button">
+                    Squish the Klee~!
+                </button>
+            </div>
+            <hr />
+            <div id="grid">
+                <noscript>Your browser does not support JavaScript or JavaScript has been
+                    disabled.<br />This website relies on JavaScript, so please enable it
+                    or use another browser.</noscript>
+            </div>
+        </div>
+    </main>
+
+    <!-- 尾部部分 | Footer -->
+    
+    <div id="footer">
+        <img id="klee-card" loading="lazy" src="img/card.jpg" alt="" /> <!--由JS控制src的具体路径-->
+        <div id="footer-text">
+            
+            <p id="footer-repository-text">
+                You can check out the Gitee repository here:
+            </p>
+            <p>
+
+               
+
+
+
+                <!--这里填写本网站的Github地址-->
+                <a href="https://gitee.com/KleeGitee/Klee" target="_blank">
+                    <span class="footer-icon-text"
+                        id="footer-repository-text-2">Web_OF_Kleedadada (Gitee)</span></a>
+            </p>
+
+            
+            <br/>
+            <p id="footer-repository-text3">
+                This website is based on the repository source code changes
+            </p>
+            <p>
+                <!--source code-->
+                <a href="https://github.com/duiqt/herta_kuru" target="_blank"><iconify-icon icon="mdi:github" id="github-footer-icon"
+                        class="footer-icon"></iconify-icon><span class="footer-icon-text"
+                        id="footer-repository-text-4">SourceCode's repository</span></a>
+            </p>
+            <br/>
+
+            <p id="footer-repository-text3">
+                This website is based on the repository source code changes
+            </p>
+            <p>
+                <!--source code-->
+                <a href="https://gitee.com/KleeGitee/Klee" target="_blank"><iconify-icon icon="mdi:github" id="github-footer-icon"
+                        class="footer-icon"></iconify-icon><span class="footer-icon-text"
+                        id="footer-repository-text-5">SourceCode's repository</span></a>
+            <p id="footer-repository-text5">
+                感谢KleeGitee提供的基础源代码
+
+            <br/>
+            <p id="credits-gif">Klee gif made by</p>
+            <p>
+                <a href="https://twitter.com/Seseren_kr" target="_blank"><iconify-icon icon="mdi:twitter"
+                        id="twitter-footer-icon" class="footer-icon"></iconify-icon><span
+                        class="footer-icon-text">@Seseren_kr</span></a>
+            </p>
+
+
+        </div>
+    </div>
+    <script src="./script.js" async></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T303QPC9L9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-T303QPC9L9');
+    </script>
+</body>
+<footer>
+    <div class="footer-content">
+     <p>code from </p>
+     <a href="https://gitee.com/KleeGitee/Klee?_from=gitee_search">GenshinImpact ThemeWeb</a>
+     <p>角色版权归Mihoyo所有 </p>
+    </div>
+   </footer>
+   
+   <style>
+   .footer-content {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     background-color: #555;
+     padding: 20px 0;
+   }
+   
+   .footer-content p {
+     margin: 0;
+   }
+   
+   .footer-content a {
+     color: white;
+   }
+   </style>
+
+
+</html>
