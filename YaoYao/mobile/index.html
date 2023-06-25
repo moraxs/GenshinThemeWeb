@@ -238,7 +238,7 @@ document.getElementById("time-info").innerText = "截至" + currentTime + "，";
     visitsXhr.send();
      // 发送AJAX请求
      var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://124.223.182.32:3004/", true);  // 将 "https://your-server-endpoint/api/getVisitorInfo" 替换为你的实际服务器端API端点
+    xhr.open("GET", "https://ip-moraxs.vercel.app/", true);  // 将 "https://your-server-endpoint/api/getVisitorInfo" 替换为你的实际服务器端API端点
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             // 处理服务器响应
