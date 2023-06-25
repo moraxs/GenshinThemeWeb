@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>中转页面</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 30px; /* 设置标题的大小 */
+        }
+        select, button {
+            margin: auto;
+            display: block;
+            width: 200px;
+            height: 50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <body style="background-image: url('img/card_cn.jpg'); background-repeat: no-repeat; background-size: cover;"></body>
+    <h1>请选择你使用的设备</h1>
+    <select onchange="window.location=this.value;">
+        <option value="" selected>请选择</option>
+        <option value="pc/index.html">PC</option>
+        <option value="mobile/index.html">移动端设备</option>
+    </select>
+    <button onclick="window.location=this.value;">确定</button>
+</body>
+</html>
